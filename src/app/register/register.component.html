@@ -1,0 +1,77 @@
+<div class="form">
+    <form [formGroup]="formUser" (ngSubmit)="send()">
+    <div class="container nick">
+        <label>
+            Nickname:
+        </label>
+        <input type="text" formControlName="nick" class="form-control" placeholder="Nick">
+        <div class="alert" *ngIf="nick.errors?.['required'] && nick.touched" >
+            Nickname is needed.
+        </div>
+        <div class="alert" *ngIf="nick.errors?.['minlength']" >
+            Nickname is too short.
+        </div>
+        <div class="alert" *ngIf="nick.errors?.['maxlength']" >
+            Nickname is too long.
+        </div>
+    </div>
+    <div class="container password">
+        <label>
+            Password:
+        </label>
+        <input type="password" formControlName="password" class="form-control" placeholder="*********">
+        <div class="alert" *ngIf="password.errors?.['required'] && nick.touched">
+            Password is required.
+        </div>
+        <div class="alert" *ngIf="password.errors?.['maxlength']">
+            Password is too long.
+        </div>
+        <div class="alert" *ngIf="password.errors?.['minlength']">
+            Password is too short.
+        </div>
+    </div>
+    <div class="container email">
+        <label>
+            Email:
+        </label>
+        <input type="email" formControlName="email" class="form-control" placeholder="example@example.com">
+        <div class="alert" [hidden]="email.valid || email.untouched">
+           <span *ngIf="email?.errors?.['required']">
+                Email is required.
+           </span>
+           <span *ngIf="email?.errors?.['email']">
+                Email has to be vaild.
+           </span>
+        </div>
+    </div>
+    <div class="container gender">
+        <label>
+            Gender:
+            <mat-radio-group formControlName="gender" aria-label="Select an option">
+                <mat-radio-button value="1">Male</mat-radio-button>
+                <mat-radio-button value="2">Female</mat-radio-button>
+            </mat-radio-group>
+        </label>
+    </div>
+    <div class="container description">
+        <label>
+            Description:
+        </label>
+        <input type="text" formControlName="description" class="form-control" placeholder="Describe yourself.">
+        <div class="alert" *ngIf="description.errors?.['required'] && description.touched" >
+            Description is needed.
+        </div>
+        <div class="alert" *ngIf="description.errors?.['minlength']" >
+            Description is too short.
+        </div>
+        <div class="alert" *ngIf="description.errors?.['maxlength']" >
+            Description is too long.
+        </div>
+    </div>
+    <div class="container">
+        <button mat-flat-button [disabled]="formUser.invalid">
+            Enviar
+        </button>
+    </div>
+    </form>
+</div>

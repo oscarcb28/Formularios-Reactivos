@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Form, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
 
@@ -35,7 +35,7 @@ get description(){
 
 formUser = new FormGroup({
   'nick' : new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
-  'password' : new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
+  'password': new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(20), Validators.pattern(/^(?=[^A-Z]*[A-Z])(?=\D*\d).*$/)]),
   'email' : new FormControl('', [Validators.required, Validators.email]),
   'gender' : new FormControl('', Validators.required),
   'description' : new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(100)])

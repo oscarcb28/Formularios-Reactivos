@@ -2,70 +2,73 @@
     <form [formGroup]="formUser" (ngSubmit)="send()">
     <div class="container nick">
         <label>
-            Nickname:
+            Nombre:
         </label>
-        <input type="text" formControlName="nick" class="form-control" placeholder="Nick">
+        <input type="text" formControlName="nick" class="form-control" placeholder="Nombre">
         <div class="alert" *ngIf="nick.errors?.['required'] && nick.touched" >
-            Nickname is needed.
+            Se necesita nombre.
         </div>
         <div class="alert" *ngIf="nick.errors?.['minlength']" >
-            Nickname is too short.
+            El nombre es muy corto.
         </div>
         <div class="alert" *ngIf="nick.errors?.['maxlength']" >
-            Nickname is too long.
+            El nombre es muy largo.
         </div>
     </div>
     <div class="container password">
         <label>
-            Password:
+            Contraseña:
         </label>
-        <input type="password" formControlName="password" class="form-control" placeholder="*********">
-        <div class="alert" *ngIf="password.errors?.['required'] && nick.touched">
-            Password is required.
+        <input type="password" formControlName="password" class="form-control" placeholder="********">
+        <div class="alert" *ngIf="password.errors?.['required'] && password.touched">
+            Se necesita contraseña.
         </div>
         <div class="alert" *ngIf="password.errors?.['maxlength']">
-            Password is too long.
+            Contraseña demasiado larga.
         </div>
         <div class="alert" *ngIf="password.errors?.['minlength']">
-            Password is too short.
+            Contraseña demasiado corta.
+        </div>
+        <div class="alert" *ngIf="password.errors?.['pattern'] ">
+            La contraseña necesita al menos una letra mayúscula y un número.
         </div>
     </div>
     <div class="container email">
         <label>
             Email:
         </label>
-        <input type="email" formControlName="email" class="form-control" placeholder="example@example.com">
+        <input type="email" formControlName="email" class="form-control" placeholder="nombre@ejemplo.com">
         <div class="alert" [hidden]="email.valid || email.untouched">
            <span *ngIf="email?.errors?.['required']">
-                Email is required.
+                Se necesita email.
            </span>
            <span *ngIf="email?.errors?.['email']">
-                Email has to be vaild.
+                El email tiene que ser válido.
            </span>
         </div>
     </div>
     <div class="container gender">
         <label>
-            Gender:
+            Género:
             <mat-radio-group formControlName="gender" aria-label="Select an option">
-                <mat-radio-button value="1">Male</mat-radio-button>
-                <mat-radio-button value="2">Female</mat-radio-button>
+                <mat-radio-button value="1">Masculino</mat-radio-button>
+                <mat-radio-button value="2">Femenino</mat-radio-button>
             </mat-radio-group>
         </label>
     </div>
     <div class="container description">
         <label>
-            Description:
+            Descripción:
         </label>
         <input type="text" formControlName="description" class="form-control" placeholder="Describe yourself.">
         <div class="alert" *ngIf="description.errors?.['required'] && description.touched" >
-            Description is needed.
+            Se necesita descripción.
         </div>
         <div class="alert" *ngIf="description.errors?.['minlength']" >
-            Description is too short.
+            La descripción es muy corta.
         </div>
         <div class="alert" *ngIf="description.errors?.['maxlength']" >
-            Description is too long.
+            La descripción es muy larga..
         </div>
     </div>
     <div class="container">

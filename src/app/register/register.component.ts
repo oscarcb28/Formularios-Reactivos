@@ -12,6 +12,7 @@ import {MatRadioModule} from '@angular/material/radio';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
+router: any;
 
 get nick(){
   return this.formUser.get('nick') as FormControl;
@@ -52,5 +53,8 @@ send(){
   console.log(this.formUser.value);
 }
 
+irTest(){
+  this.router.navigate(['/test']);
+}
 
 }

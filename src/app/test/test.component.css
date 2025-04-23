@@ -1,0 +1,17 @@
+h2 {
+    color: grey;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.opciones {
+    margin-right: 10px;
+}
+
+

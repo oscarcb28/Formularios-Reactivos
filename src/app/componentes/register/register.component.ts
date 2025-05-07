@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,8 @@ import {MatRadioModule} from '@angular/material/radio';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-router: any;
+  
+constructor(private router: Router) {}
 
 get nick(){
   return this.formUser.get('nick') as FormControl;
@@ -54,7 +56,7 @@ send(){
 }
 
 irTest(){
-  this.router.navigate(['/test']);
+  this.router.navigate(['/test-con-json']);
 }
 
 }

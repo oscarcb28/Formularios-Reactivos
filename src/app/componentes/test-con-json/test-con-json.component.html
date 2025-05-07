@@ -1,0 +1,17 @@
+<div *ngIf="!quizFinalizado && preguntas.length">
+    <h2>Test Capitales:</h2>
+    <p>{{ preguntas[indicePreguntaActual].enunciado }}</p>
+    <ul>
+      <li class="opciones" *ngFor="let opcion of preguntas[indicePreguntaActual].opciones; let i = index">
+        <button mat-stroked-button (click)="seleccionarRespuesta(i)">
+          {{ opcion }}
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="quizFinalizado">
+    <h2>¡Has terminado el test!</h2>
+    <p>Respuestas correctas: {{ respuestasCorrectas }} de {{ preguntas.length }}</p>
+    <p>Tu puntuación: {{ obtenerPuntuacion() | number:'1.0-2' }}%</p>
+  </div>

@@ -1,0 +1,27 @@
+[
+  {
+    "enunciado": "¿Cuál es la capital de Francia?",
+    "opciones": ["Madrid", "París", "Berlín", "Londres"],
+    "indiceRespuestaCorrecta": 1
+  },
+  {
+    "enunciado": "¿Cuál es la capital de Argentina?",
+    "opciones": ["Montevideo", "Santiago", "Buenos Aires", "Rosario"],
+    "indiceRespuestaCorrecta": 2
+  },
+  {
+    "enunciado": "¿Cuál es la capital de China?",
+    "opciones": ["Beijing", "Tokio", "Seúl", "Shanghái"],
+    "indiceRespuestaCorrecta": 0
+  },
+  {
+    "enunciado": "¿Cuál es la capital de Catar?",
+    "opciones": ["Dubái", "Doha", "Riad", "Abu Dabi"],
+    "indiceRespuestaCorrecta": 1
+  },
+  {
+    "enunciado": "¿Cuál es la capital de Kenia?",
+    "opciones": ["Mogadiscio", "Pretoria", "Abuya", "Nairobi"],
+    "indiceRespuestaCorrecta": 3
+  }
+]

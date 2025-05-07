@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { RegisterComponent } from "./register/register.component";
-import { TestComponent } from './test/test.component';
+import { RegisterComponent } from "./componentes/register/register.component";
+import { TestComponent } from './componentes/test/test.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RegisterComponent, RouterOutlet, TestComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

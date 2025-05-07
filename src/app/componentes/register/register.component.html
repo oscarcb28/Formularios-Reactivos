@@ -60,7 +60,7 @@
         <label>
             Descripción:
         </label>
-        <input type="text" formControlName="description" class="form-control" placeholder="Describe yourself.">
+        <input type="text" formControlName="description" class="form-control" placeholder="Descríbete.">
         <div class="alert" *ngIf="description.errors?.['required'] && description.touched" >
             Se necesita descripción.
         </div>
@@ -68,7 +68,7 @@
             La descripción es muy corta.
         </div>
         <div class="alert" *ngIf="description.errors?.['maxlength']" >
-            La descripción es muy larga..
+            La descripción es muy larga.
         </div>
     </div>
     <div class="container">

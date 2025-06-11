@@ -1,0 +1,26 @@
+
+
+.container {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.a {
+    cursor: pointer; 
+}
+
+.b {
+    margin-left: 200px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.c {
+    margin-top: 75px;
+    cursor: pointer;
+}
+
+.d {
+    margin-left: 200px;
+    cursor: pointer;
+}

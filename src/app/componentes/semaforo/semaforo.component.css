@@ -1,0 +1,64 @@
+.todo {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.semaforo {
+    height: fit-content;
+    background-color:#808080;
+    width: fit-content;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px black;
+}
+
+.rojo{
+    height: 60px;
+    width: 60px;
+    font-size:10px;
+    border-radius: 50%;
+    background: #ff0000;
+    box-shadow:  -11px -11px 22px #c3c3c3,
+             11px 11px 22px #fdfdfd;
+}
+
+.ambar{
+    height: 60px;
+    width: 60px;
+    font-size:10px;
+    border-radius: 50%;
+    background: #ffb700;
+    box-shadow:  -11px -11px 22px #c3c3c3,
+             11px 11px 22px #fdfdfd;    
+}
+
+.verde{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: #00a110;
+    box-shadow:  -11px -11px 22px #c3c3c3,
+             11px 11px 22px #fdfdfd;
+}
+
+.negro{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: #000000;
+    box-shadow:  -11px -11px 22px #c3c3c3,
+             11px 11px 22px #fdfdfd; 
+}
+
+.numero {
+    padding-top: 30px;
+    font-size: 50px;
+}

@@ -59,4 +59,8 @@ irTest(){
   this.router.navigate(['/test-con-json']);
 }
 
+irSemaforo(){
+  this.router.navigate(['/semaforo']);
+}
+
 }

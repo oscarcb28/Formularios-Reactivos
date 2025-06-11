@@ -1,0 +1,17 @@
+<div class="todo">
+
+
+<div class="semaforo">
+    <div><button *ngIf="numero>1; else apagado" class="rojo"></button></div>
+    <div><button *ngIf="numero==1; else apagado" class="ambar"></button></div>
+    <div><button *ngIf="numero<1; else apagado" class="verde"></button></div>    
+</div>
+
+<ng-template #apagado>
+    <button class="negro"></button>
+</ng-template>
+
+<div class="numero">{{numero}}</div>
+
+    
+</div>

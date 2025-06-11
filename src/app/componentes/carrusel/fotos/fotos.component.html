@@ -1,0 +1,8 @@
+<div class="todo">
+    <div>Futbolistas del Barcelona:</div>
+    <div class="seleccion">
+        <div><button  (click)="antPj()" class="boton">🢀</button></div>
+        <app-descripciones class="futbolista" [futbolista]="futbolistas[id_futbolista - 1]"></app-descripciones>
+        <div><button  (click)="sigPj()" class="boton">🢂</button></div>
+    </div>
+</div>
